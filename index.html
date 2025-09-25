@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="container">
+    <div class="header-row">
+      <h1>Simple Calculator</h1>
+      <button id="theme-toggle" aria-label="Toggle dark theme">🌙</button>
+    </div>
+
+    <form id="calc-form" class="calculator" onsubmit="return false;">
+      <div class="row">
+        <label for="op">Operation</label>
+        <select id="op" aria-label="operation">
+          <option value="add">Add (+)</option>
+          <option value="sub">Subtract (-)</option>
+          <option value="mul">Multiply (×)</option>
+          <option value="div">Divide (÷)</option>
+        </select>
+      </div>
+
+      <div class="row">
+        <label for="a">First number</label>
+        <input id="a" type="number" step="any" inputmode="decimal" required />
+      </div>
+
+      <div class="row">
+        <label for="b">Second number</label>
+        <input id="b" type="number" step="any" inputmode="decimal" required />
+      </div>
+
+      <div class="row actions">
+        <button id="calc" type="button">Calculate</button>
+        <button id="clear" type="button" class="secondary">Clear</button>
+      </div>
+
+      <div class="row result" aria-live="polite">
+        <label>Result</label>
+        <div id="result">—</div>
+      </div>
+    </form>
+
+    <footer>
+      <p>Also available as a Python package: <code>python -m calculator</code></p>
+      <p class="site-credit">Created by Rylan Johnson</p>
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
